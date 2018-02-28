@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>scroll-behavior</title>
+	<style>
+		.view {
+		  border: 1px solid red;
+		  height: 2000px;
+		  position: relative;
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+      <h1>Scroll Behavior</h1>
+      <ul>
+        <li><router-link to="/">/</router-link></li>
+        <li><router-link to="/foo">/foo</router-link></li>
+        <li><router-link to="/bar">/bar</router-link></li>
+        <li><router-link to="/bar#anchor">/bar#anchor</router-link></li>
+      </ul>
+      <router-view class="view"></router-view>
+    </div>
+</body>
+<script type="text/javascript" src="bundle.js"></script>
+</html>

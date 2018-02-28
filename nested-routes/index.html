@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>nested-routes</title>
+	<style>
+		.parent {
+		  border: 1px solid #f66;
+		  padding: 10px;
+		}
+		.child {
+		  border: 1px solid #f66;
+		  padding: 10px 20px;
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<h1>Nested Routes</h1>
+	      <ul>
+	        <li><router-link to="/parent">/parent</router-link></li>
+	        <li><router-link to="/parent/foo">/parent/foo</router-link></li>
+	        <li><router-link to="/parent/bar">/parent/bar</router-link></li>
+	        <li><router-link to="/baz">/baz</router-link></li>
+	        <li><router-link to="/parent/qux/123">/parent/qux</router-link></li>
+	        <li><router-link to="/parent/quy/123">/parent/quy</router-link></li>
+	        <li><router-link :to="{name: 'zap', params: {zapId: 0}}">/parent/zap</router-link></li>
+	        <li><router-link :to="{name: 'zap', params: {zapId: 1}}">/parent/zap/1</router-link></li>
+	        <li><router-link :to="{ params: { zapId: 2 }}">{ params: { zapId: 2 }} (relative params)</router-link></li>
+	      </ul>
+	      <router-view class="view"></router-view>
+	</div>
+</body>
+<script src="bundle.js"></script>
+</html>
